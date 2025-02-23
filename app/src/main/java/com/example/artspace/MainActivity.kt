@@ -66,7 +66,10 @@ fun ArtSpace() {
         Spacer(modifier = Modifier.height(100.dp))
         Box(
             contentAlignment = Alignment.Center,
-            modifier = Modifier.background(Color.LightGray).size(350.dp,500.dp)
+            modifier = Modifier
+                .background(Color.White)
+                .size(350.dp,500.dp)
+                .shadow(elevation = 2.dp)
         ){
             Image(
                 painter = painterResource(R.drawable.whispers_of_the_soul_damola_ayegbayo_2024),
@@ -76,15 +79,22 @@ fun ArtSpace() {
         }
         Spacer(modifier = Modifier.height(20.dp))
         Box(modifier = Modifier
-            .background(Color.Red)
+            .background(Color.LightGray)
             .size(300.dp, 100.dp)
             ,
             contentAlignment = Alignment.Center
 
         ){
             Column (){
-                Text(text = "Whispers of the Soul", fontSize = 26.sp)
-                Text(text = "Damola Ayegbayo(2024)", fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                Text(
+                    text = "Whispers of the Soul",
+                    fontSize = 26.sp
+                )
+                Text(
+                    text = "Damola Ayegbayo(2024)",
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                )
 
             }
         }
@@ -109,7 +119,7 @@ fun ArtSpace() {
     showSystemUi = true
 )
 @Composable
-fun GreetingPreview() {
+fun ArtSpacePreview() {
     ArtSpaceTheme {
         ArtSpace()
     }
