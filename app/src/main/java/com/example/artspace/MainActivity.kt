@@ -24,6 +24,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
@@ -55,9 +59,107 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+@Composable
+fun ArtSpace(){
+
+    var result by remember { mutableStateOf(1) }
+
+    when(result){
+        1 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.whispers_of_the_soul_damola_ayegbayo_2024,
+                artDescription = R.string.whispers_of_the_soul_dam_24,
+                artistInformation = R.string.Damola_Ayegbayo_24,
+                onPreviousButtonClick = {
+                    result = 0
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        2 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.wanna_be_rogers_akamike_2023,
+                artDescription = R.string.wanna_be_RA_24,
+                artistInformation = R.string.Rogers_Akamike_24,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        3 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.eniyan_human__damola_ayegbayo_2024,
+                artDescription = R.string.eniyan_dam_24,
+                artistInformation = R.string.Damola_Ayegbayo_24,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        4 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.against_all_odds_damola_ayegbayo_2024,
+                artDescription = R.string.against_all_odds_dam_24,
+                artistInformation = R.string.Damola_Ayegbayo_24,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        5 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.finding_balance_paul_ogunlesi_2024,
+                artDescription = R.string.finding_balance_PO_24,
+                artistInformation = R.string.Paul_Ogunlesi_24,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        6 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.whispers_of_the_soul_damola_ayegbayo_2024,
+                artDescription = R.string.whispers_of_the_soul_dam_24,
+                artistInformation = R.string.Damola_Ayegbayo_24,
+                onPreviousButtonClick = {
+                    result = 1
+                },
+                onNextButtonClick = {
+                    result = 2
+                }
+            )
+        }
+    }
+}
 
 @Composable
-fun ArtSpace() {
+fun ArtSpaceEditor(
+    imageResource: Int,
+    artDescription: Int,
+    artistInformation: Int,
+    onPreviousButtonClick: () -> Unit,
+    onNextButtonClick: () -> Unit
+
+) {
     Column (
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally

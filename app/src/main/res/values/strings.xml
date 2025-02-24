@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">ArtSpace</string>
+    <string name="against_all_odds_dam_24">Against all odds</string>
+    <string name="eniyan_dam_24">Eniyan(Human)</string>
+    <string name="whispers_of_the_soul_dam_24">Whispers of the soul</string>
+    <string name="state_of_mind_dam_24">State of mind</string>
+    <string name="finding_balance_PO_24">Finding Balance</string>
+    <string name="ceiling_of_versailes_MA">Ceiling of versailes</string>
+    <string name="time_PO_24">Time</string>
+    <string name="wanna_be_RA_24">Wanna Be</string>
+    <string name="womans_journey">Woman\'s Journey</string>
+    <string name="wooded_landscape">Wooded Landscape</string>
+    <string name="Damola_Ayegbayo_24">Damola Ayegbayo(2024)</string>
+    <string name="Paul_Ogunlesi_24">Paul Ogunlesi(2024)</string>
+    <string name="Michael_Angelo">Michael Angelo</string>
+    <string name="Obiora_Ekeanozie_24">Obiora Ekeanozie(2024)</string>
+    <string name="Rijk_museum">Rijk Museum(1640)</string>
+    <string name="Rogers_Akamike_24">Rogers Akamike(2024)</string>
+
 </resources>
