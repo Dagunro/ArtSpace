@@ -5,4 +5,14 @@ An Android app that can display artwork or family photos
 
 ## Here is the result
 
-![deployed Image](https://github.com/user-attachments/assets/fc29035e-6be9-479c-a064-a0fe63da1490)
+![Screenshot 2025-02-24 at 10 24 23](https://github.com/user-attachments/assets/99ab44d2-438e-44a2-84ce-8b166c999c95)
+
+I built upon my knowledge of Composables 
+
+- Modifiers
+- Horizontal alignment and vertical arrangement.
+- Learnt how to use the box function that stacks items on top of each other.
+- I used column and Row functions interchangeably.
+- Leveraged WHEN expression over IF-ELSE.
+- Learnt how to declare functions and use functions declared in another function.
+- I further understood the use of the lambda functions. This was essential in the making the onclick function better.
