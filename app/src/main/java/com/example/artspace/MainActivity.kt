@@ -34,6 +34,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -137,14 +138,70 @@ fun ArtSpace(){
 
         6 -> {
             ArtSpaceEditor(
-                imageResource = R.drawable.whispers_of_the_soul_damola_ayegbayo_2024,
-                artDescription = R.string.whispers_of_the_soul_dam_24,
+                imageResource = R.drawable.state_of_mind_damola_ayegbayo_2024,
+                artDescription = R.string.state_of_mind_dam_24,
                 artistInformation = R.string.Damola_Ayegbayo_24,
                 onPreviousButtonClick = {
-                    result = 1
+                    result--
                 },
                 onNextButtonClick = {
-                    result = 2
+                    result++
+                }
+            )
+        }
+
+        7 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.painting_on_the_ceiling_of_versailes_micheal_angelo,
+                artDescription = R.string.ceiling_of_versailes_MA,
+                artistInformation = R.string.Michael_Angelo,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        8 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.time_paul_ogunlesi_2020,
+                artDescription = R.string.time_PO_24,
+                artistInformation = R.string.Paul_Ogunlesi_20,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        9 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.womans_journey_obiora_ekeanozie_2024,
+                artDescription = R.string.womans_journey,
+                artistInformation = R.string.Obiora_Ekeanozie_24,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result++
+                }
+            )
+        }
+
+        10 -> {
+            ArtSpaceEditor(
+                imageResource = R.drawable.wooded_landscape_rijkmuseum_1640,
+                artDescription = R.string.wooded_landscape,
+                artistInformation = R.string.Rijk_museum,
+                onPreviousButtonClick = {
+                    result--
+                },
+                onNextButtonClick = {
+                    result = 1
                 }
             )
         }
@@ -174,8 +231,8 @@ fun ArtSpaceEditor(
                 .shadow(elevation = 2.dp)
         ){
             Image(
-                painter = painterResource(R.drawable.whispers_of_the_soul_damola_ayegbayo_2024),
-                contentDescription = "A painting titled Human by Damola Ayegbayo",
+                painter = painterResource(imageResource),
+                contentDescription = stringResource(artDescription),
                 modifier = Modifier.size(400.dp)
             )
         }
@@ -189,11 +246,11 @@ fun ArtSpaceEditor(
         ){
             Column (){
                 Text(
-                    text = "Whispers of the Soul",
+                    text = stringResource(artDescription),
                     fontSize = 26.sp
                 )
                 Text(
-                    text = "Damola Ayegbayo(2024)",
+                    text = stringResource(artistInformation),
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
                 )
@@ -202,11 +259,11 @@ fun ArtSpaceEditor(
         }
         Spacer(modifier = Modifier.height(40.dp))
         Row (horizontalArrangement = Arrangement.SpaceBetween){
-            Button(onClick = {}, modifier = Modifier.size(150.dp, 40.dp)) {
+            Button(onClick = onPreviousButtonClick, modifier = Modifier.size(150.dp, 40.dp)) {
                 Text(text = "Previous")
             }
             Spacer(modifier = Modifier.width(20.dp))
-            Button(onClick = {}, modifier = Modifier.size(150.dp, 40.dp)) {
+            Button(onClick = onNextButtonClick, modifier = Modifier.size(150.dp, 40.dp)) {
                 Text(text = "Next")
             }
 
